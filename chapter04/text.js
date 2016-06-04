@@ -278,11 +278,47 @@ argumentCounter('straw man', 'tautology', 'ad hominem');
 
 // an alternative to the last addEntry function, using the 'arguments' property
 function addEntry(squirrel) {
+
+  // use the first argument
   var entry = { events: [], squirrel: squirrel };
-  for (var i = 0; i < arguments.length; i ++) {
+
+  // make use of the next arguments, no matter how many there are
+  for (var i = 0; i < arguments.length; i++) {
     entry.events.push(arguments[i]);
   }
 
   journal.push(entry);
 }
 
+addEntry(true, 'work', 'touched tree', 'pizza', 'running', 'television');
+
+/* Javascript does not have namespacing and does not warn you when you are about to overwrite
+  an existing variable name! WOOT! */
+
+/* Math functions */
+
+function randomPointOnCircle(radius) {
+
+  // Math.random() is between 0 inclusive and 1 exclusive
+  var angle = Math.random() * 2 * Math.PI;
+  return { x: radius * Math.cos(angle), y: radius * Math.sin(angle) };
+}
+
+console.log(randomPointOnCircle(2));
+console.log(Math.random());
+console.log(Math.random());
+console.log(Math.random());
+console.log(Math.floor(Math.random() * 10));
+console.log(Math.ceil(Math.random() * 10));
+
+// this one is to the nearest, up or down
+console.log(Math.round(3.2));
+console.log(Math.round(3.7));
+console.log(Math.round(3.5));
+
+/* using properties of the global Object */
+
+// this is how you would supposedly access the global object in a browser: 'window'
+// var myVar = 10;
+// console.log('myVar' in window);
+// console.log(window.myVar);
