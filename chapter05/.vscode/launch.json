@@ -5,7 +5,7 @@
       "name": "Launch",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceRoot}/chapter05/text.js",
+      "program": "${workspaceRoot}/text.js",
       "stopOnEntry": false,
       "args": [],
       "cwd": "${workspaceRoot}",
