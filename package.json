@@ -1,8 +1,8 @@
 {
-  "name": "chapter03",
+  "name": "eloquent-javascript",
   "version": "1.0.0",
   "description": "",
-  "main": "text.js",
+  "main": "chapter05/text.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
